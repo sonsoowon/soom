@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Soom
+        link(rel="stylesheet", href="https://unpkg.com/mvp.css@1.12/mvp.css")
+    body 
+        header 
+            h1 Soom
+        main
+            div#welcome
+                ul
+                form
+                    input(placeholder="room name", type="text", required)
+                    button Enter Room
+            div#room
+                h3
+                ul 
+                form#nickname
+                    input(placeholder="nickname", type="text", required)
+                    button Save
+                form#msg
+                    input(placeholder="message", type="text", required)
+                    button Send
+        script(src="/socket.io/socket.io.js")
+        script(src="/public/js/app.js") 
