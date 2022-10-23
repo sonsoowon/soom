@@ -11,18 +11,17 @@ html(lang="en")
             h1 Soom
         main
             div#welcome
-                ul
                 form
                     input(placeholder="room name", type="text", required)
-                    button Enter Room
-            div#room
-                h3
-                ul 
-                form#nickname
-                    input(placeholder="nickname", type="text", required)
-                    button Save
-                form#msg
-                    input(placeholder="message", type="text", required)
-                    button Send
+                    button Enter room
+            div#call
+                div#myStream
+                    video#myFace(autoplay, playsinline, width="400", height="400")
+                    button#mute Mute
+                    button#camera Turn Camera Off
+                    select#cameras
+                    video#peerFace(autoplay, playsinline, width="400", height="400")
+
+
         script(src="/socket.io/socket.io.js")
         script(src="/public/js/app.js") 
